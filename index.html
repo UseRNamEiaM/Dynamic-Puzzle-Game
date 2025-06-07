@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Puzzle Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcome-screen">
+    <h1>🧩 Welcome to the Puzzle Game</h1>
+    <button id="enter-button">Enter Game</button>
+    <!-- Animated Puzzle Background -->
+    <div id="floating-pieces"></div>
+
+  </div>
+
+  <!-- Main Game Container -->
+  <div class="container hidden" id="main-game">
+    <header>
+      <h1 class="main-heading">🧩 Image Puzzle Game</h1>
+    </header>
+
+    <div id="controls">
+      <label>
+        Difficulty:
+        <select id="difficulty">
+          <option value="3">3 x 3</option>
+          <option value="4">4 x 4</option>
+          <option value="5">5 x 5</option>
+        </select>
+      </label>
+
+      <label>
+        Upload Image
+        <input type="file" id="image-upload" accept="image/*">
+      </label>
+
+      <button id="start-button">Start Game</button>
+
+      <div id="info">
+        <span id="move-counter">Moves: 0</span>
+        <span id="timer">Time: 0s</span>
+      </div>
+    </div>
+
+    <div id="puzzle-grid"></div>
+    <div id="message"></div>
+    <div id="high-score"></div>
+
+    <div id="extras">
+      <button id="reset-button">🔁 Reset</button>
+      <button id="try-new">🖼️ Try New Image</button>
+      <button id="dark-toggle">🌙 Toggle Dark Mode</button>
+      <button id="music-toggle">🎵</button>
+      <div id="volume-controls">
+        <button id="vol-down">➖</button>
+        <span id="vol-display">50%</span>
+        <button id="vol-up">➕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Win Screen -->
+ <div id="win-screen" class="hidden">
+  <div class="win-message">
+    <h1>🎉 YOU WON! 🎉</h1>
+    <p>You're a Puzzle Master!</p>
+    <button id="back-to-main" class="primary">🔙 Back </button>
+  </div>
+</div>
+
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="https://www.bensound.com/bensound-music/bensound-ukulele.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="solved-sound" preload="auto">
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_b9e9b85798.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
